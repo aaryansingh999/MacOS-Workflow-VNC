@@ -1,18 +1,18 @@
-#configure.sh VNC_USER_PASSWORD VNC_PASSWORD NGROK_AUTH_TOKEN
+#configure.sh AARYAN_PASSWORD VNC_PASSWORD NGROK_AUTH_TOKEN
 
 #disable spotlight indexing
 sudo mdutil -i off -a
 
 #Create new account
-sudo dscl . -create /Users/vncuser
-sudo dscl . -create /Users/vncuser UserShell /bin/bash
-sudo dscl . -create /Users/vncuser RealName "VNC User"
-sudo dscl . -create /Users/vncuser UniqueID 1001
-sudo dscl . -create /Users/vncuser PrimaryGroupID 80
-sudo dscl . -create /Users/vncuser NFSHomeDirectory /Users/vncuser
-sudo dscl . -passwd /Users/vncuser $1
-sudo dscl . -passwd /Users/vncuser $1
-sudo createhomedir -c -u vncuser > /dev/null
+sudo dscl . -create /Users/Aaryan
+sudo dscl . -create /Users/Aaryan UserShell /bin/bash
+sudo dscl . -create /Users/Aaryan RealName "Aaryan"
+sudo dscl . -create /Users/Aaryan UniqueID 1001
+sudo dscl . -create /Users/Aaryan PrimaryGroupID 80
+sudo dscl . -create /Users/Aaryan NFSHomeDirectory /Users/vncuser
+sudo dscl . -passwd /Users/Aaryan $1
+sudo dscl . -passwd /Users/Aaryan $1
+sudo createhomedir -c -u Aaryan > /dev/null
 
 #Enable VNC
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -allowAccessFor -allUsers -privs -all
